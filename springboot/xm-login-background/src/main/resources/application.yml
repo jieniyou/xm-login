@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/jieniyou
+    username: XiaoMin
+    password: 990421lm
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+    port: 81

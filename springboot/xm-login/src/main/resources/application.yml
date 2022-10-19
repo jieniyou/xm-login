@@ -1,0 +1,59 @@
+server:
+  port: 8080
+spring:
+  datasource:
+#    url: jdbc:mysql://47.93.7.123:3306/jieniyou?characterEncoding=UTF8&autoReconnect=true&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/jieniyou?characterEncoding=UTF8&autoReconnect=true&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+#    url: jdbc:mysql://mysql.sqlpub.com:3306/jieniyou?characterEncoding=UTF8&autoReconnect=true&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+#    url: jdbc:mysql://mysql.sqlpub.com:3306/yueyan?characterEncoding=UTF8&autoReconnect=true&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: XiaoMin
+#    username: xiaomin
+#    username: yueyanlm
+    password: 990421lm
+#    password: 1314520yueyan
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mail:
+    #编码集
+    default-encoding: utf-8
+    #smtp服务主机
+    host: smtp.qq.com
+    #服务协议
+    protocol: smtp
+    #发哦那个邮件的账户
+    username: xiaomin.spring@qq.com
+    #授权码
+    password: bbwbgwkgzesdbfii
+    test-connection: true
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            enable: true
+    #阿里云默认禁止25端口,所以使用465和ssl加密发送
+    port: 465
+  #redis配置
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器地址
+    host: localhost
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password:
+    jedis:
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 20
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+        # 连接池中的最大空闲连接
+        max-idle: 10
+        # 连接池中的最小空闲连接
+        min-idle: 0
+    # 连接超时时间（毫秒）
+    connect-timeout: 1000
