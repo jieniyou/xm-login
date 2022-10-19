@@ -13,8 +13,8 @@ spring:
     host: smtp.qq.com
     #服务协议
     protocol: smtp
-    #发哦那个邮件的账户
-    username: xiaomin.spring@qq.com
+    #发邮件的账户
+    username: 邮箱地址
     #授权码
     password: 你的授权码
     test-connection: true
